@@ -152,7 +152,7 @@ const Footer = () => {
               </Link>
 
               <Link
-                href="https://youtube.com/@tabassumeducationalalliancereg?si=sm-YKvKdEI8tg5nf" target="_blank" rel="noopener noreferrer"><FaYoutube />
+                href="https://youtube.com/@tabassumeducationalalliancereg?si=1uA3hx--VnkgORG2" target="_blank" rel="noopener noreferrer"><FaYoutube />
               </Link>
             </div>
           </div>

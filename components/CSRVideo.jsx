@@ -2,10 +2,11 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaPlay, FaXmark } from "react-icons/fa6";
+import { FaPlay, FaXmark, FaYoutube, FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 export default function CSRVideo() {
   const [isOpen, setIsOpen] = useState(false);
+  const officialChannelUrl = "https://youtube.com/@tabassumeducationalalliancereg?si=1uA3hx--VnkgORG2";
 
   // Close modal on Escape key press
   useEffect(() => {
@@ -23,9 +24,6 @@ export default function CSRVideo() {
       document.body.classList.remove("overflow-hidden");
     };
   }, [isOpen]);
-
-  // YouTube video embed URL (Educational & School Documentary / Community Impact)
-  const videoEmbedUrl = "https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1&rel=0";
 
   return (
     <section className="w-full px-4 sm:px-8 lg:px-12 py-8 sm:py-12 maxWSec">
@@ -86,16 +84,33 @@ export default function CSRVideo() {
             </button>
           </motion.div>
 
-          {/* Subtle Tagline */}
-          <motion.span
+          {/* Direct Channel & Video Links */}
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-sky-200/90 bg-white/10 px-4 py-1.5 rounded-full border border-white/15 backdrop-blur-sm"
+            className="flex items-center gap-3 flex-wrap justify-center"
           >
-            Watch Documentary & Initiatives
-          </motion.span>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-sky-200 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/20 backdrop-blur-sm transition inline-flex items-center gap-2"
+            >
+              <FaPlay className="text-[10px]" />
+              <span>Watch Video</span>
+            </button>
+
+            <a
+              href={officialChannelUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-white bg-red-600/90 hover:bg-red-600 px-4 py-2 rounded-full border border-red-500/40 shadow-lg transition inline-flex items-center gap-2 hover:scale-105"
+            >
+              <FaYoutube className="text-sm" />
+              <span>Official YouTube Channel</span>
+              <FaArrowUpRightFromSquare className="text-[9px]" />
+            </a>
+          </motion.div>
         </div>
       </div>
 
@@ -115,26 +130,42 @@ export default function CSRVideo() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="relative w-full max-w-4xl aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/20"
+              className="relative w-full max-w-4xl aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/20 flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
               <button
                 onClick={() => setIsOpen(false)}
                 aria-label="Close Video Modal"
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-10 h-10 rounded-full bg-black/70 hover:bg-main text-white flex items-center justify-center transition-all duration-200 border border-white/30 backdrop-blur-sm"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-10 h-10 rounded-full bg-black/70 hover:bg-main text-white flex items-center justify-center transition-all duration-200 border border-white/30 backdrop-blur-sm shadow-md"
               >
                 <FaXmark className="text-lg" />
               </button>
 
-              {/* YouTube Iframe Embed */}
+              {/* YouTube Player / Channel Stream */}
               <iframe
-                src={videoEmbedUrl}
-                title="Tabassum Educational Alliance - Corporate Social Responsibility"
+                src="https://www.youtube.com/embed?listType=user_uploads&list=tabassumeducationalalliancereg"
+                title="Tabassum Educational Alliance Official YouTube"
                 className="w-full h-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
+
+              {/* Bottom Bar with Channel Link */}
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-4 flex items-center justify-between pointer-events-auto">
+                <span className="text-xs text-slate-300 font-medium hidden sm:inline">
+                  Tabassum Educational Alliance Regd.
+                </span>
+                <a
+                  href={officialChannelUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold text-white bg-red-600 hover:bg-red-700 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5 ml-auto shadow-md transition"
+                >
+                  <FaYoutube />
+                  <span>Subscribe on YouTube</span>
+                </a>
+              </div>
             </motion.div>
           </motion.div>
         )}
