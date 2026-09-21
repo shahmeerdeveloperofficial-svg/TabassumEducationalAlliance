@@ -128,37 +128,31 @@ export default function Leadership() {
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-10 lg:p-12 items-center">
-          {/* Left / Monogram & Seal */}
-          <div className="lg:col-span-4 flex justify-center">
-            <div className="relative w-full max-w-[280px] sm:max-w-xs rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-white/10 to-white/5 p-6 border-2 border-sky-400/30 flex flex-col items-center text-center gap-4 group">
-              <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full p-2 bg-gradient-to-tr from-amber-400 via-sky-400 to-white shadow-xl flex items-center justify-center">
-                <div className="relative w-full h-full rounded-full overflow-hidden bg-white shadow-inner">
-                  <Image
-                    src="/monograms/tea_main.jpg"
-                    alt="Nazir Dhuddi - Chairman TEA Regd."
-                    fill
-                    sizes="(max-width: 640px) 144px, 176px"
-                    className="object-contain p-1 group-hover:scale-110 transition-transform duration-500 brightness-105"
-                  />
-                </div>
+          {/* Left / Portrait Image */}
+          <div className="lg:col-span-5 flex justify-center">
+            <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl border-2 border-sky-400/40 group">
+              <div className="aspect-[3/4] relative w-full bg-slate-950">
+                <Image
+                  src="/leadership/mufti_tahir_tabassum.jpg"
+                  alt="Nazir Dhuddi - Chairman TEA Regd."
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 420px"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  priority
+                />
               </div>
-
-              <div className="flex flex-col gap-1">
-                <span className="font-berlin font-bold text-lg sm:text-xl text-white">
-                  Nazir Dhuddi
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent p-4 flex items-center justify-between text-xs">
+                <span className="font-semibold text-sky-300 flex items-center gap-1.5">
+                  <FaBuildingColumns className="text-sky-400" />
+                  Chairman
                 </span>
-                <span className="text-xs font-semibold text-amber-300">
-                  Chairman — TEA Regd.
-                </span>
-                <span className="text-[11px] text-slate-300 font-medium">
-                  Leading TEA Since 2008
-                </span>
+                <span className="text-slate-300 text-[11px]">TEA Regd.</span>
               </div>
             </div>
           </div>
 
           {/* Right / Content & Message */}
-          <div className="lg:col-span-8 flex flex-col gap-5">
+          <div className="lg:col-span-7 flex flex-col gap-5">
             <div className="flex flex-col gap-2">
               <div className="inline-flex items-center gap-2 self-start px-3.5 py-1 rounded-full bg-sky-400/15 border border-sky-400/30 text-sky-300 text-xs font-bold uppercase tracking-widest">
                 <FaBuildingColumns className="text-sm text-sky-400" />
