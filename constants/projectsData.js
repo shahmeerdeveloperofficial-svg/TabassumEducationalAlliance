@@ -4,7 +4,7 @@ export const motherProjects = [
     number: "01",
     name: "Oxford Progressive Schools Regd.",
     shortName: "Oxford Progressive Schools",
-    monogram: "/monograms/oxford.svg",
+    monogram: "/monograms/oxford.jpg",
     tagline: "Concept-based modern schooling & strong academic foundations.",
     description:
       "Delivering international academic standards, conceptual STEM curriculum, and disciplined student development across campuses.",
@@ -52,7 +52,7 @@ export const motherProjects = [
     number: "04",
     name: "Idara Taleemat-e-Nabawia Lahore",
     shortName: "Idara Taleemat-e-Nabawia",
-    monogram: "/monograms/idara.svg",
+    monogram: "/monograms/idara.jpg",
     tagline: "Value-based education, spiritual heritage & holistic growth.",
     description:
       "Providing deep cultural roots, ethical foundations, and community enlightenment rooted in exemplary moral principles.",
@@ -68,7 +68,7 @@ export const motherProjects = [
     number: "05",
     name: "The Nest (National Educational School for Triumph)",
     shortName: "The Nest (School for Triumph)",
-    monogram: "/monograms/nest.svg",
+    monogram: "/monograms/nest.jpg",
     tagline: "Experiential education, innovation & triumphant student leadership.",
     description:
       "Fostering creative problem-solving, extracurricular excellence, and progressive academic mentorship for young achievers.",
@@ -85,7 +85,7 @@ export const alliesProjects = [
   {
     id: 1,
     name: "Al Qalam School",
-    monogram: "/monograms/alqalam.svg",
+    monogram: "/monograms/alqalam.jpg",
     tagline: "Pen of Knowledge & Academic Excellence",
   },
   {
@@ -103,7 +103,7 @@ export const alliesProjects = [
   {
     id: 4,
     name: "National Ulama Council Pakistan",
-    monogram: "/monograms/ulama_council.svg",
+    monogram: "/monograms/ulama_council.jpg",
     tagline: "Moral Leadership & National Values",
   },
 ];
