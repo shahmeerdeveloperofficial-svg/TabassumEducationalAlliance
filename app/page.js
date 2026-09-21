@@ -11,6 +11,7 @@ const Marquee = dynamic(() => import("../components/Marquee"), { ssr: false });
 const Clubs = dynamic(() => import("../components/Clubs"));
 const VideoSec = dynamic(() => import("../components/VideoSec"));
 const AccessLMS = dynamic(() => import("../components/AccessLMS"));
+const Franchises = dynamic(() => import("../components/Franchises"));
 const Stats2 = dynamic(() => import("../components/Stats2"));
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
       <Leadership />
       <Team />
       <AccessLMS />
+      <Franchises />
       <Stats2 />
     </main>
   );
