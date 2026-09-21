@@ -49,15 +49,15 @@ const HeroHeader = ({ title, description }) => {
                 }`}
               />
             ))}
-            {/* Subtle clean overlay like rills.edu.pk so student photos are bright, crisp & clearly visible */}
-            <div className="absolute inset-0 bg-black/30 z-[2]" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/25 z-[3]" />
+            {/* Subtle clean overlay so student photos and text are bright, crisp & clearly visible */}
+            <div className="absolute inset-0 bg-slate-950/40 z-[2]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-slate-950/60 z-[3]" />
           </>
         ) : (
           <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_20%_20%,#00a2e8_0,transparent_35%),radial-gradient(circle_at_85%_85%,#003b7a_0,transparent_40%)]" />
         )}
 
-        <div className="relative text-light z-10 flex-1 flex flex-col items-center justify-center gap-4 px-6 text-center">
+        <div className="relative text-light z-10 flex-1 flex flex-col items-center justify-center gap-4 px-6 text-center pt-20 sm:pt-28 pb-16">
           <motion.h1
             initial={{ y: -20, opacity: 0 }}
             animate={{
