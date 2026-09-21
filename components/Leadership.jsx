@@ -121,7 +121,89 @@ export default function Leadership() {
         </div>
       </div>
 
-      {/* 2. President (Honorary) & CEO Dual Feature Cards */}
+      {/* 2. Chairman Feature Card (Nazir Dhuddi) */}
+      <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 via-[#002b5e] to-slate-950 text-white shadow-2xl border border-slate-800/90">
+        {/* Ambient Glow */}
+        <div className="absolute top-0 right-0 w-80 h-80 bg-sky-500/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-10 lg:p-12 items-center">
+          {/* Left / Monogram & Seal */}
+          <div className="lg:col-span-4 flex justify-center">
+            <div className="relative w-full max-w-[280px] sm:max-w-xs rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-white/10 to-white/5 p-6 border-2 border-sky-400/30 flex flex-col items-center text-center gap-4 group">
+              <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full p-2 bg-gradient-to-tr from-amber-400 via-sky-400 to-white shadow-xl flex items-center justify-center">
+                <div className="relative w-full h-full rounded-full overflow-hidden bg-white shadow-inner">
+                  <Image
+                    src="/monograms/tea_main.jpg"
+                    alt="Nazir Dhuddi - Chairman TEA Regd."
+                    fill
+                    sizes="(max-width: 640px) 144px, 176px"
+                    className="object-contain p-1 group-hover:scale-110 transition-transform duration-500 brightness-105"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <span className="font-berlin font-bold text-lg sm:text-xl text-white">
+                  Nazir Dhuddi
+                </span>
+                <span className="text-xs font-semibold text-amber-300">
+                  Chairman — TEA Regd.
+                </span>
+                <span className="text-[11px] text-slate-300 font-medium">
+                  Leading TEA Since 2008
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right / Content & Message */}
+          <div className="lg:col-span-8 flex flex-col gap-5">
+            <div className="flex flex-col gap-2">
+              <div className="inline-flex items-center gap-2 self-start px-3.5 py-1 rounded-full bg-sky-400/15 border border-sky-400/30 text-sky-300 text-xs font-bold uppercase tracking-widest">
+                <FaBuildingColumns className="text-sm text-sky-400" />
+                <span>Chairman — Tabassum Educational Alliance Regd.</span>
+              </div>
+
+              <h3 className="font-berlin text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-wide">
+                Nazir Dhuddi
+              </h3>
+
+              <p className="text-sky-200 text-xs sm:text-sm font-medium">
+                Founding Visionary & Network Leadership — Since 2008
+              </p>
+            </div>
+
+            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Leading the founding mission, strategic governance, and nationwide expansion of Tabassum Educational Alliance Regd. with a steadfast commitment to accessible quality education, moral character building, and educational empowerment across Pakistan.
+            </p>
+
+            {/* Chairman Message Excerpt */}
+            <div className="p-4 rounded-2xl bg-white/[0.05] border-l-4 border-sky-400 text-xs sm:text-sm text-slate-200 italic leading-relaxed">
+              “Education is the foundation upon which individuals, communities and nations build their future. Since its establishment in 2008, TEA has been committed to serving education with sincerity, expanding opportunities for learners, and contributing positively to the future of Pakistan.”
+            </div>
+
+            {/* Action buttons */}
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <Link
+                href="/ChairmanMessage"
+                className="px-5 py-2.5 rounded-full bg-main hover:bg-mainD text-white text-xs font-bold shadow-lg transition-all flex items-center gap-2 hover:scale-105"
+              >
+                <span>Read Full Chairman's Message</span>
+                <FaArrowRight className="text-[10px]" />
+              </Link>
+              <a
+                href="tel:03008847670"
+                className="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white border border-white/20 text-xs font-semibold transition-all"
+              >
+                Contact Head Office
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 3. President (Honorary) & CEO Dual Feature Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {/* President (Honorary) */}
         <div className="group rounded-3xl bg-white border border-slate-200 hover:border-main/50 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">

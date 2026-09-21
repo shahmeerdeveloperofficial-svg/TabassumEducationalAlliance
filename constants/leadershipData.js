@@ -14,6 +14,24 @@ export const patronInChief = {
     "Providing esteemed spiritual guidance, visionary leadership, and overarching patronage to Tabassum Educational Alliance Regd., ensuring values-based education, moral integrity, and national empowerment.",
 };
 
+export const chairman = {
+  name: "Nazir Dhuddi",
+  title: "Chairman",
+  organization: "Tabassum Educational Alliance Regd.",
+  image: "/monograms/tea_main.jpg",
+  tagline: "Founding Visionary & Network Leadership (Since 2008)",
+  description:
+    "Leading the founding mission and strategic direction of Tabassum Educational Alliance Regd. since 2008 with a steadfast commitment to accessible quality education, character building, and nationwide institutional excellence.",
+  quote:
+    "“Education is the foundation upon which individuals, communities and nations build their future. Since its establishment in 2008, TEA has been committed to serving education with sincerity, expanding opportunities for learners, and contributing positively to the future of Pakistan.”",
+  highlights: [
+    "Founding Visionary (Since 2008)",
+    "Nationwide Network Governance",
+    "Values-Driven Institutional Growth",
+    "Youth Empowerment & Community Service",
+  ],
+};
+
 export const executiveLeadership = [
   {
     id: "patron",
@@ -31,6 +49,22 @@ export const executiveLeadership = [
     ],
     description:
       "Visionary mentor and religious scholar guiding the spiritual, ethical, and academic philosophy of TEA across Pakistan.",
+  },
+  {
+    id: "chairman",
+    name: "Nazir Dhuddi",
+    role: "Chairman",
+    badge: "Chairman",
+    organization: "Tabassum Educational Alliance Regd.",
+    image: "/monograms/tea_main.jpg",
+    isPoster: false,
+    highlights: [
+      "Chairman TEA Regd. (Since 2008)",
+      "Founding Vision & Network Leadership",
+      "Strategic Governance & Educational Expansion",
+    ],
+    description:
+      "Steering the founding vision, strategic governance, and nationwide growth of Tabassum Educational Alliance Regd.",
   },
   {
     id: "president",
