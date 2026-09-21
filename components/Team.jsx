@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { boardOfDirectors } from "@/constants/directorsData";
@@ -9,43 +9,19 @@ import { HiSparkles } from "react-icons/hi2";
 
 export default function Team() {
   const sliderRef = useRef(null);
-  const [isPaused, setIsPaused] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    const interval = setInterval(() => {
-      if (isPaused || !slider) return;
-
-      slider.scrollLeft += 1;
-
-      // Infinite loop effect when reaching halfway through duplicated items
-      if (slider.scrollLeft >= slider.scrollWidth / 2) {
-        slider.scrollLeft = 0;
-      }
-    }, 28);
-
-    return () => clearInterval(interval);
-  }, [isPaused]);
 
   // Smooth scroll left or right by exactly one card
   const scroll = (direction) => {
     if (!sliderRef.current) return;
     const container = sliderRef.current;
-    const cardWidth = window.innerWidth < 640 ? container.clientWidth * 0.88 + 16 : 330;
+    const firstCard = container.querySelector("[data-director-card]");
+    const cardWidth = firstCard
+      ? firstCard.getBoundingClientRect().width + 16
+      : window.innerWidth < 640
+      ? window.innerWidth * 0.84 + 16
+      : 320;
     const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
     container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-  };
-
-  // Track active card index for dots indicator on mobile
-  const handleScroll = () => {
-    if (!sliderRef.current) return;
-    const container = sliderRef.current;
-    const cardWidth = window.innerWidth < 640 ? container.clientWidth * 0.88 + 16 : 330;
-    const newIndex = Math.round(container.scrollLeft / cardWidth) % boardOfDirectors.length;
-    setCurrentIndex(newIndex);
   };
 
   return (
@@ -84,17 +60,19 @@ export default function Team() {
             <div className="flex gap-2">
               <button
                 onClick={() => scroll("left")}
+                type="button"
                 aria-label="Previous director"
-                className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 hover:bg-main hover:text-white hover:border-main transition-all duration-200"
+                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 active:scale-95 hover:bg-main hover:text-white hover:border-main transition-all duration-200 cursor-pointer touch-manipulation"
               >
-                <FaChevronLeft className="text-xs sm:text-sm" />
+                <FaChevronLeft className="text-sm" />
               </button>
               <button
                 onClick={() => scroll("right")}
+                type="button"
                 aria-label="Next director"
-                className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 hover:bg-main hover:text-white hover:border-main transition-all duration-200"
+                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 active:scale-95 hover:bg-main hover:text-white hover:border-main transition-all duration-200 cursor-pointer touch-manipulation"
               >
-                <FaChevronRight className="text-xs sm:text-sm" />
+                <FaChevronRight className="text-sm" />
               </button>
             </div>
           </div>
@@ -104,19 +82,19 @@ export default function Team() {
       {/* Infinite Carousel Slider (1 Card on Mobile, Responsive Cards on Desktop) */}
       <div
         ref={sliderRef}
-        onScroll={handleScroll}
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        onTouchStart={() => setIsPaused(true)}
-        onTouchEnd={() => setIsPaused(false)}
-        className="w-full overflow-x-auto no-scrollbar scroll-smooth cursor-grab active:cursor-grabbing pb-4 snap-x sm:snap-none"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        className="w-full overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory pb-4"
+        style={{
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          WebkitOverflowScrolling: "touch",
+        }}
       >
-        <div className="flex gap-4 sm:gap-6 w-max py-2">
+        <div className="flex gap-4 sm:gap-6 w-max py-2 px-1">
           {[...boardOfDirectors, ...boardOfDirectors].map((member, index) => (
             <div
               key={`${member.id}-${index}`}
-              className="w-[86vw] max-w-[320px] sm:w-[310px] flex flex-col group select-none bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-main/60 transition-all duration-300 overflow-hidden shrink-0 snap-center"
+              data-director-card="true"
+              className="w-[84vw] max-w-[320px] sm:w-[310px] flex flex-col group select-none bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-main/60 transition-all duration-300 overflow-hidden shrink-0 snap-center"
             >
               {/* Director Photo Frame */}
               <div className="relative aspect-[6/7] w-full bg-slate-50 overflow-hidden">
@@ -124,7 +102,7 @@ export default function Team() {
                   src={member.image}
                   alt={member.name}
                   fill
-                  sizes="(max-width: 640px) 86vw, 310px"
+                  sizes="(max-width: 640px) 84vw, 310px"
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   priority={index < 3}
                 />
@@ -173,20 +151,6 @@ export default function Team() {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Mobile Dots Indicator */}
-      <div className="flex sm:hidden items-center justify-center gap-1.5 pt-1">
-        {boardOfDirectors.map((_, dotIdx) => (
-          <div
-            key={dotIdx}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              dotIdx === currentIndex
-                ? "w-6 bg-main"
-                : "w-2 bg-slate-300"
-            }`}
-          />
-        ))}
       </div>
 
       {/* Bottom Call to Action */}

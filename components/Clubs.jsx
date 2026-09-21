@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motherProjects } from "@/constants/projectsData";
@@ -8,49 +8,23 @@ import { HiSparkles } from "react-icons/hi2";
 
 const Clubs = () => {
   const sliderRef = useRef(null);
-  const [isPaused, setIsPaused] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Smooth scroll left or right by one card
+  // Smooth scroll left or right by exactly one card
   const scroll = (direction) => {
     if (!sliderRef.current) return;
     const container = sliderRef.current;
-    // On mobile, card is roughly container.clientWidth - 32px, on desktop ~380px
-    const cardWidth = window.innerWidth < 640 ? container.clientWidth * 0.88 + 16 : 380;
+    const firstCard = container.querySelector("[data-card-item]");
+    const cardWidth = firstCard
+      ? firstCard.getBoundingClientRect().width + 16
+      : window.innerWidth < 640
+      ? window.innerWidth * 0.84 + 16
+      : 380;
     const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
 
     container.scrollBy({
       left: scrollAmount,
       behavior: "smooth",
     });
-  };
-
-  // Auto-scroll loop when not hovered or touched
-  useEffect(() => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    const interval = setInterval(() => {
-      if (isPaused || !slider) return;
-
-      slider.scrollLeft += 1;
-
-      // Infinite loop effect when halfway through duplicated items
-      if (slider.scrollLeft >= slider.scrollWidth / 2) {
-        slider.scrollLeft = 0;
-      }
-    }, 28);
-
-    return () => clearInterval(interval);
-  }, [isPaused]);
-
-  // Track active card index for dots indicator
-  const handleScroll = () => {
-    if (!sliderRef.current) return;
-    const container = sliderRef.current;
-    const cardWidth = window.innerWidth < 640 ? container.clientWidth * 0.88 + 16 : 380;
-    const newIndex = Math.round(container.scrollLeft / cardWidth) % motherProjects.length;
-    setCurrentIndex(newIndex);
   };
 
   const ArrayData = [...motherProjects, ...motherProjects, ...motherProjects];
@@ -87,44 +61,46 @@ const Clubs = () => {
           <div className="flex gap-2">
             <button
               onClick={() => scroll("left")}
+              type="button"
               aria-label="Previous Project"
-              className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 hover:bg-main hover:text-white hover:border-main transition-all duration-200"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 active:scale-95 hover:bg-main hover:text-white hover:border-main transition-all duration-200 cursor-pointer touch-manipulation"
             >
-              <FaChevronLeft className="text-xs sm:text-sm" />
+              <FaChevronLeft className="text-sm" />
             </button>
             <button
               onClick={() => scroll("right")}
+              type="button"
               aria-label="Next Project"
-              className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 hover:bg-main hover:text-white hover:border-main transition-all duration-200"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 active:scale-95 hover:bg-main hover:text-white hover:border-main transition-all duration-200 cursor-pointer touch-manipulation"
             >
-              <FaChevronRight className="text-xs sm:text-sm" />
+              <FaChevronRight className="text-sm" />
             </button>
           </div>
         </div>
       </div>
 
-      {/* Horizontal Carousel (1 Card on Mobile, Smooth Multi-card on Desktop) */}
+      {/* Horizontal Carousel (Butter-smooth Touch Swiping & Button Control) */}
       <div
         ref={sliderRef}
-        onScroll={handleScroll}
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        onTouchStart={() => setIsPaused(true)}
-        onTouchEnd={() => setIsPaused(false)}
-        className="w-full overflow-x-auto no-scrollbar scroll-smooth cursor-grab active:cursor-grabbing pb-4 snap-x sm:snap-none"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        className="w-full overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory pb-4"
+        style={{
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          WebkitOverflowScrolling: "touch",
+        }}
       >
-        <div className="flex gap-4 sm:gap-6 w-max py-2">
+        <div className="flex gap-4 sm:gap-6 w-max py-2 px-1">
           {ArrayData.map((item, i) => (
             <Link
               key={i}
               href={item.slug}
+              data-card-item="true"
               className="block shrink-0 snap-center select-none"
             >
               <div
                 className="w-[84vw] max-w-[340px] sm:w-[360px] lg:w-[400px] h-[380px] sm:h-[440px] rounded-3xl overflow-hidden relative shadow-lg hover:shadow-2xl border border-slate-200/90 transition-all duration-300 group bg-slate-900 flex flex-col justify-between p-5 sm:p-7"
               >
-                {/* Bright, Crystal Clear Background Photo (NO heavy blue tint) */}
+                {/* Background Photo */}
                 <Image
                   src={item.image}
                   alt={item.name}
@@ -133,7 +109,7 @@ const Clubs = () => {
                   className="object-cover object-center opacity-95 transition-transform duration-700 group-hover:scale-105"
                 />
 
-                {/* Clean Bottom Gradient for High Contrast Text Reading */}
+                {/* Bottom Gradient for Text Contrast */}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-slate-950/20 z-[1]" />
 
                 {/* Card Top: Monogram & Tag */}
@@ -176,20 +152,6 @@ const Clubs = () => {
             </Link>
           ))}
         </div>
-      </div>
-
-      {/* Mobile Dots Indicator */}
-      <div className="flex sm:hidden items-center justify-center gap-1.5 pt-1">
-        {motherProjects.map((_, dotIdx) => (
-          <div
-            key={dotIdx}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              dotIdx === currentIndex
-                ? "w-6 bg-main"
-                : "w-2 bg-slate-300"
-            }`}
-          />
-        ))}
       </div>
     </section>
   );
