@@ -1,0 +1,24 @@
+<svg viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="itGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00a2e8"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <polygon points="100,18 172,58 172,142 100,182 28,142 28,58" fill="url(#itGrad)" stroke="url(#cyanGlow)" stroke-width="4.5"/>
+  <polygon points="100,28 162,64 162,136 100,172 38,136 38,64" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <rect x="75" y="75" width="50" height="50" rx="8" fill="#1e293b" stroke="url(#cyanGlow)" stroke-width="2.5"/>
+  <circle cx="100" cy="100" r="14" fill="url(#cyanGlow)" opacity="0.2"/>
+  <path d="M100 45 L100 75 M100 125 L100 155 M45 100 L75 100 M125 100 L155 100 M62 62 L78 78 M138 62 L122 78 M62 138 L78 122 M138 138 L122 122" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="100" cy="45" r="4" fill="#38bdf8"/>
+  <circle cx="100" cy="155" r="4" fill="#38bdf8"/>
+  <circle cx="45" cy="100" r="4" fill="#38bdf8"/>
+  <circle cx="155" cy="100" r="4" fill="#38bdf8"/>
+  <path d="M103 85 L94 100 L101 100 L97 115 L108 98 L101 98 Z" fill="#facc15" stroke="#eab308" stroke-width="1"/>
+  <text x="100" y="145" font-family="Arial, sans-serif" font-size="8.5" font-weight="bold" fill="#38bdf8" text-anchor="middle" letter-spacing="1.5">I.T &amp; SKILLS</text>
+</svg>

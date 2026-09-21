@@ -44,6 +44,8 @@ const Footer = () => {
       title: "Explore",
       content: [
         { title: "About Us", src: "/AboutUs" },
+        { title: "Executive Leadership", src: "/Leadership" },
+        { title: "Board of Directors", src: "/BoardOfDirectors" },
         { title: "Chairman's Message", src: "/ChairmanMessage" },
         { title: "Our Journey (Since 2008)", src: "/OurJourney" },
         { title: "Our Philosophy", src: "/OurPhilosophy" },

@@ -10,20 +10,19 @@ const studentLifeData = [
   { title: "Primary", slug: "Primary" },
 ];
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return studentLifeData.map((studentLife) => ({
     slug: studentLife.slug,
   }));
 }
 
-export async function generateMetadata({ params }) {
-  const slug = params.slug;
+export function generateMetadata({ params }) {
+  const slug = params?.slug;
   const studentLife = studentLifeData.find((item) => item.slug === slug);
-  if (!studentLife) notFound();
+  if (!studentLife) return { title: "Student Life | Tabassum Educational Alliance" };
 
   return {
     title: `${studentLife.title} - Student Life | Tabassum Educational Alliance`,
-    default: "Student Life | Tabassum Educational Alliance",
   };
 }
 
@@ -78,8 +77,8 @@ const cmsContentBySlug = {
   ],
 };
 
-const StudentLife = async ({ params }) => {
-  const slug = params.slug;
+const StudentLife = ({ params }) => {
+  const slug = params?.slug;
   const studentLife = studentLifeData.find((item) => item.slug === slug);
 
   if (!studentLife) notFound();

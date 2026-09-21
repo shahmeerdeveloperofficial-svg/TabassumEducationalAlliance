@@ -1,0 +1,23 @@
+<svg viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iqraGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="50%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="iqraGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="30" width="140" height="140" rx="24" fill="url(#iqraGreen)" stroke="url(#iqraGold)" stroke-width="4.5"/>
+  <rect x="30" y="30" width="140" height="140" rx="24" transform="rotate(45 100 100)" fill="url(#iqraGreen)" stroke="url(#iqraGold)" stroke-width="4.5"/>
+  <circle cx="100" cy="100" r="60" fill="#022c22" stroke="url(#iqraGold)" stroke-width="3"/>
+  <circle cx="100" cy="100" r="55" fill="none" stroke="url(#iqraGold)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M78 120 L78 95 C78 78 100 68 100 68 C100 68 122 78 122 95 L122 120 Z" fill="url(#iqraGreen)" stroke="url(#iqraGold)" stroke-width="2"/>
+  <path d="M104 52 A 8 8 0 1 0 96 64 A 10 10 0 1 1 104 52 Z" fill="url(#iqraGold)"/>
+  <polygon points="100,50 101.5,54 105,54 102,56.5 103,60 100,58 97,60 98,56.5 95,54 98.5,54" fill="#FFFBEB"/>
+  <path d="M100 95 C93 90 82 88 72 90 L72 118 C82 116 93 118 100 123 C107 118 118 116 128 118 L128 90 C118 88 107 90 100 95 Z" fill="#ffffff" stroke="url(#iqraGold)" stroke-width="2"/>
+  <text x="100" y="88" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="url(#iqraGold)" text-anchor="middle" letter-spacing="2">IQRA</text>
+  <text x="100" y="142" font-family="Arial, sans-serif" font-size="7.5" font-weight="bold" fill="#FDE68A" text-anchor="middle" letter-spacing="1">MADINAT-UL-ATFAL</text>
+</svg>

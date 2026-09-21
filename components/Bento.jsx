@@ -5,41 +5,20 @@ import Tag from "./ui/Tag";
 import Button from "./ui/Button";
 import Link from "next/link";
 import Image from "next/image";
+import { motherProjects, alliesProjects } from "@/constants/projectsData";
 
 const Bento = () => {
-  const MotherProjects = [
-    {
-      title: "01 Oxford Progressive Schools Regd.",
-      url: "/SocietyAndClubs",
-    },
-    {
-      title: "02 IQRA Madinat-Ul-Atfal Group of Schools Regd.",
-      url: "/SocietyAndClubs",
-    },
-    {
-      title: "03 Tabassum I.T and Skills Center",
-      url: "/SocietyAndClubs",
-    },
-    {
-      title: "04 Idara Taleemat-e-Nabawia Lahore",
-      url: "/SocietyAndClubs",
-    },
-    {
-      title: "05 The Nest (National Educational School for Triumph)",
-      url: "/SocietyAndClubs",
-    },
-  ];
-
   return (
     <section
       id="About"
-      className="maxWSec px-6 sm:px-12 py-12 flex gap-12 flex-col"
+      className="maxWSec px-4 sm:px-8 lg:px-12 py-12 flex gap-12 flex-col"
     >
       <h2 className="h2 text-center text-slate-900">
         Welcome to <span className="text-main">Tabassum Educational Alliance Regd.</span>
       </h2>
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
-        <div className="sm:[grid-area:1/1/2/3] group/card p-6 rounded-3xl bg-main text-light relative overflow-hidden">
+        {/* Mission Statement Card */}
+        <div className="sm:[grid-area:1/1/2/3] group/card p-6 sm:p-8 rounded-3xl bg-main text-light relative overflow-hidden shadow-lg">
           <Image
             src="/book.svg"
             width="400"
@@ -63,12 +42,12 @@ const Bento = () => {
               <li><strong>Serving Society</strong> by making education a means of empowerment and national development.</li>
             </ul>
 
-            <div className="flex justify-end">
+            <div className="flex justify-end pt-2">
               <Link href={"/OnlineAdmission"}>
                 <Button btnType="sec">
                   <span>Online Admission</span>
                   <svg
-                    className="h-auto w-4"
+                    className="h-auto w-4 ml-1"
                     viewBox="0 0 18 13"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -86,33 +65,45 @@ const Bento = () => {
           </div>
         </div>
 
-        <div className="sm:[grid-area:2/1/3/2] group/card flex-1 min-h-72 p-6 rounded-3xl bg-sec text-light relative overflow-hidden">
+        {/* Mother Projects Visual Box (Monograms + Names) */}
+        <div className="sm:[grid-area:2/1/3/2] group/card flex-1 min-h-72 p-6 sm:p-7 rounded-3xl bg-sec text-light relative overflow-hidden shadow-lg">
           <Image
             src="/speaker.svg"
             width="400"
             height="400"
             alt="speaker"
-            className="transition-all duration-700 group-hover/card:scale-110 origin-bottom-right absolute right-0 bottom-0 w-40 translate-x-[5%] translate-y-[5%] opacity-15"
+            className="transition-all duration-700 group-hover/card:scale-110 origin-bottom-right absolute right-0 bottom-0 w-40 translate-x-[5%] translate-y-[5%] opacity-10"
           />
           <div className="flex flex-col gap-4 relative z-10">
             <Tag><p className="font-bold">Mother Projects</p></Tag>
-            <div className="flex flex-col gap-2">
-              {MotherProjects.map((item, i) => {
-                return (
-                  <Link
-                    key={i}
-                    href={item.url}
-                    name="detail link"
-                    className="w-fit text-light text-sm sm:text-base flex items-center gap-2 hover:gap-3 hover:underline transition-all duration-300"
-                  >
-                    <span>{item.title}</span>
-                  </Link>
-                );
-              })}
+            <div className="flex flex-col gap-3">
+              {motherProjects.map((item) => (
+                <Link
+                  key={item.id}
+                  href={item.slug}
+                  name="detail link"
+                  className="w-full text-light flex items-center gap-3 p-2 rounded-xl bg-white/5 hover:bg-white/15 transition-all duration-300 border border-white/10 group/item"
+                >
+                  {/* Monogram */}
+                  <div className="w-8 h-8 rounded-lg bg-white p-1 shrink-0 flex items-center justify-center shadow-sm">
+                    <Image
+                      src={item.monogram}
+                      alt={item.name}
+                      width={32}
+                      height={32}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span className="text-xs sm:text-sm font-semibold group-hover/item:text-sky-300 transition-colors line-clamp-1">
+                    {item.number} {item.name}
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
 
+        {/* TEA Hero Banner Card */}
         <div className="sm:[grid-area:2/2/3/3] xl:[grid-area:1/3/3/4] min-h-72 rounded-3xl bg-slate-900 text-light overflow-hidden relative flex items-center justify-center p-8 shadow-xl">
           <Image
             src="/tea_student1.jpg"
@@ -130,7 +121,8 @@ const Bento = () => {
           </div>
         </div>
 
-        <div className="sm:[grid-area:3/1/4/3] xl:[grid-area:2/2/3/3] group/card min-h-72 p-6 rounded-3xl bg-main relative overflow-hidden">
+        {/* Our Allies Visual Box */}
+        <div className="sm:[grid-area:3/1/4/3] xl:[grid-area:2/2/3/3] group/card min-h-72 p-6 sm:p-7 rounded-3xl bg-main relative overflow-hidden shadow-lg text-white">
           <Image
             src="/spark.svg"
             width="400"
@@ -140,15 +132,28 @@ const Bento = () => {
           />
           <div className="relative z-10 flex flex-col gap-4">
             <Tag><p className="font-bold">Our Allies</p></Tag>
-            <p className="text-sm sm:text-base text-light leading-relaxed">
+            <p className="text-sm font-medium leading-relaxed">
               Proud collaborative partners across Pakistan:
             </p>
-            <ul className="list-disc list-inside text-sm sm:text-base text-light space-y-1">
-              <li>01 Al Qalam School</li>
-              <li>02 Kids Education School System</li>
-              <li>03 Fikr e Raat</li>
-              <li>04 National Ulama Council Pakistan</li>
-            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              {alliesProjects.map((ally) => (
+                <div
+                  key={ally.id}
+                  className="flex items-center gap-2.5 p-2 rounded-xl bg-white/10 backdrop-blur-sm border border-white/15"
+                >
+                  <div className="w-7 h-7 rounded-full bg-white p-1 shrink-0 flex items-center justify-center">
+                    <Image
+                      src={ally.monogram}
+                      alt={ally.name}
+                      width={28}
+                      height={28}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span className="text-xs font-semibold line-clamp-1">{ally.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

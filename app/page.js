@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 
 import HeroHeader from "../components/HeroHeader";
 import Bento from "../components/Bento";
+import Leadership from "@/components/Leadership";
 import Team from "@/components/Team";
 import About from "@/components/About";
 
@@ -37,6 +38,7 @@ export default function Home() {
       <About />
       <Clubs direction={"right"} speed={0.2} />
       <VideoSec />
+      <Leadership />
       <Team />
       <AccessLMS />
       <Stats2 />

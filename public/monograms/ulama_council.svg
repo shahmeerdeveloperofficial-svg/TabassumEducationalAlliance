@@ -1,0 +1,12 @@
+<svg viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ulamaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803d"/><stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="82" fill="url(#ulamaGrad)" stroke="#86efac" stroke-width="4"/>
+  <path d="M105 60 A 24 24 0 1 0 105 110 A 30 30 0 1 1 105 60 Z" fill="#ffffff"/>
+  <polygon points="110,75 112,81 118,81 113,85 115,91 110,87 105,91 107,85 102,81 108,81" fill="#ffffff"/>
+  <text x="100" y="142" font-family="Arial, sans-serif" font-size="7.5" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">NATIONAL ULAMA COUNCIL</text>
+  <text x="100" y="154" font-family="Arial, sans-serif" font-size="7" font-weight="medium" fill="#86efac" text-anchor="middle">PAKISTAN</text>
+</svg>

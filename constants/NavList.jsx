@@ -3,6 +3,8 @@ export const NavList = [
     title: "About School",
     content: [
       { title: "About Tabassum Educational Alliance", slug: "/AboutUs" },
+      { title: "Executive Leadership", slug: "/Leadership" },
+      { title: "Board of Directors", slug: "/BoardOfDirectors" },
       { title: "Chairman's Message", slug: "/ChairmanMessage" },
       { title: "Director's Message", slug: "/DirectorMessage" },
       { title: "Our Philosophy", slug: "/OurPhilosophy" },

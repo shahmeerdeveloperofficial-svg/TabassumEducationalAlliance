@@ -1,6 +1,9 @@
 import React from "react";
 import HeroHeader from "@/components/HeroHeader";
 import RichTextRenderer from "@/components/RichTextRenderer";
+import MotherProjects from "@/components/MotherProjects";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
 
 const AboutUs = () => {
   const cmsData = {
@@ -63,64 +66,63 @@ const AboutUs = () => {
         type: "p",
         text: "• Serving Society by making education a means of empowerment, positive change and national development.",
       },
-      {
-        type: "br",
-      },
-      {
-        type: "h2",
-        text: "Mother Projects of Tabassum Educational Alliance Regd.",
-      },
-      {
-        type: "p",
-        text: "1. Oxford Progressive Schools Regd.",
-      },
-      {
-        type: "p",
-        text: "2. IQRA Madinat-Ul-Atfal Group of Schools Regd.",
-      },
-      {
-        type: "p",
-        text: "3. Tabassum I.T and Skills Center",
-      },
-      {
-        type: "p",
-        text: "4. Idara Taleemat-e-Nabawia Lahore",
-      },
-      {
-        type: "p",
-        text: "5. The Nest (National Educational School for Triumph)",
-      },
-      {
-        type: "br",
-      },
-      {
-        type: "h2",
-        text: "Our Allies",
-      },
-      {
-        type: "p",
-        text: "1. Al Qalam School",
-      },
-      {
-        type: "p",
-        text: "2. Kids Education School System",
-      },
-      {
-        type: "p",
-        text: "3. Fikr e Raat",
-      },
-      {
-        type: "p",
-        text: "4. National Ulama Council Pakistan",
-      },
     ],
   };
 
   return (
     <main>
       <HeroHeader title={"About Us"} description="Tabassum Educational Alliance Regd. — Since 2008" />
-      <div className="flex flex-col gap-2 maxWSec px-6 sm:px-12 py-12">
+      <div className="flex flex-col gap-6 maxWSec px-4 sm:px-8 lg:px-12 py-12">
         <RichTextRenderer content={cmsData.content} />
+
+        {/* Visual Mother Projects & Allies Section with Monograms on Top & Names Below */}
+        <div className="mt-8">
+          <MotherProjects />
+        </div>
+
+        {/* Executive Leadership Spotlight */}
+        <div className="mt-8 p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-slate-900 via-sec to-slate-950 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800">
+          <div className="flex flex-col gap-2">
+            <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
+              Patronage & Apex Leadership
+            </span>
+            <h3 className="font-berlin text-3xl font-bold text-white">
+              Executive Leadership
+            </h3>
+            <p className="text-sm text-slate-300 max-w-xl leading-relaxed">
+              Led by Patron-in-Chief Mufti Muhammad Tahir Tabassum Qadri, Chairman Nazir Dhuddi, President (Honorary) Muhammad Anwar Ul Rasool Murtazai, and CEO Hafiz Junaid Dhuddi.
+            </p>
+          </div>
+          <Link
+            href="/Leadership"
+            className="shrink-0 px-6 py-3 rounded-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm shadow-lg hover:shadow-amber-500/30 transition-all duration-300 flex items-center gap-2"
+          >
+            <span>View Executive Leadership</span>
+            <FaArrowRight className="text-xs" />
+          </Link>
+        </div>
+
+        {/* Board of Directors Spotlight Section */}
+        <div className="mt-4 p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-sec via-secD to-slate-950 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col gap-2">
+            <span className="text-xs font-semibold uppercase tracking-widest text-sky-300">
+              Strategic Governance
+            </span>
+            <h3 className="font-berlin text-3xl font-bold text-white">
+              Board of Directors
+            </h3>
+            <p className="text-sm text-slate-300 max-w-xl leading-relaxed">
+              Meet the 9 visionary directors, academics, and legal leaders guiding the strategic growth, educational standards, and nation-wide impact of Tabassum Educational Alliance Regd.
+            </p>
+          </div>
+          <Link
+            href="/BoardOfDirectors"
+            className="shrink-0 px-6 py-3 rounded-full bg-main hover:bg-mainD text-white text-sm font-semibold shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 flex items-center gap-2"
+          >
+            <span>Explore Board Members</span>
+            <FaArrowRight className="text-xs" />
+          </Link>
+        </div>
       </div>
     </main>
   );
