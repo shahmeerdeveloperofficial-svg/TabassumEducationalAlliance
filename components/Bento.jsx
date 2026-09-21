@@ -76,8 +76,8 @@ const Bento = () => {
           />
           <div className="flex flex-col gap-4 relative z-10">
             <Tag><p className="font-bold">Mother Projects</p></Tag>
-            <div className="flex flex-col gap-3">
-              {motherProjects.map((item) => (
+            <div className="flex flex-col gap-2.5">
+              {motherProjects.slice(0, 5).map((item) => (
                 <Link
                   key={item.id}
                   href={item.slug}
@@ -99,6 +99,12 @@ const Bento = () => {
                   </span>
                 </Link>
               ))}
+              <Link
+                href="/AboutUs"
+                className="text-xs text-sky-200 hover:text-white font-semibold pt-1 flex items-center justify-end gap-1 transition-colors"
+              >
+                <span>View All 10 Institutions & Allies →</span>
+              </Link>
             </div>
           </div>
         </div>
