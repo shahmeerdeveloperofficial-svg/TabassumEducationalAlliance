@@ -90,9 +90,9 @@ export default function Team() {
         }}
       >
         <div className="flex gap-4 sm:gap-6 w-max py-2 px-1">
-          {[...boardOfDirectors, ...boardOfDirectors].map((member, index) => (
+          {boardOfDirectors.map((member, index) => (
             <div
-              key={`${member.id}-${index}`}
+              key={member.id}
               data-director-card="true"
               className="w-[84vw] max-w-[320px] sm:w-[310px] flex flex-col group select-none bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-main/60 transition-all duration-300 overflow-hidden shrink-0 snap-center"
             >
