@@ -53,7 +53,7 @@ const Navbar = () => {
 
   return (
     <motion.nav className="sticky -top-4 w-full z-50 h-0 max-w-full">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full maxW p-8">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full maxW p-3 sm:p-6 lg:p-8">
         <div className="shadow-[0_0_0.5rem_0_#00000020] flex items-center justify-between rounded-xl h-16 bg-light text-dark px-3">
           <Link href={"/"} name="home link" className="mr-auto">
             <Image

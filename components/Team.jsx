@@ -60,16 +60,16 @@ export default function Team() {
           <span>Tabassum Educational Alliance Regd.</span>
         </div>
 
-        <h2 className="h2 text-slate-900 leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-berlin font-bold text-slate-900 leading-tight">
           Board of <span className="text-main">Directors</span>
         </h2>
 
-        <p className="max-w-2xl text-slate-600 text-xs sm:text-sm sm:text-base">
+        <p className="max-w-2xl text-slate-600 text-xs sm:text-sm sm:text-base leading-relaxed">
           Distinguished academic leaders, legal advisors, and educators shaping the strategic vision, quality standards, and future of Tabassum Educational Alliance since 2008.
         </p>
 
         {/* Carousel Controls */}
-        <div className="flex items-center justify-between w-full mt-4">
+        <div className="flex items-center justify-between w-full mt-2 sm:mt-4">
           <div className="text-xs sm:text-sm text-slate-500 font-medium hidden sm:block">
             Scroll or drag to explore all {boardOfDirectors.length} board members
           </div>
@@ -85,16 +85,16 @@ export default function Team() {
               <button
                 onClick={() => scroll("left")}
                 aria-label="Previous director"
-                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 hover:bg-main hover:text-white hover:border-main transition-all duration-200"
+                className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 hover:bg-main hover:text-white hover:border-main transition-all duration-200"
               >
-                <FaChevronLeft className="text-sm" />
+                <FaChevronLeft className="text-xs sm:text-sm" />
               </button>
               <button
                 onClick={() => scroll("right")}
                 aria-label="Next director"
-                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 hover:bg-main hover:text-white hover:border-main transition-all duration-200"
+                className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 hover:bg-main hover:text-white hover:border-main transition-all duration-200"
               >
-                <FaChevronRight className="text-sm" />
+                <FaChevronRight className="text-xs sm:text-sm" />
               </button>
             </div>
           </div>

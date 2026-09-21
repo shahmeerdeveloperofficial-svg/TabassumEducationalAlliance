@@ -67,10 +67,10 @@ const Clubs = () => {
             <HiSparkles className="text-main" />
             <span>Network Projects</span>
           </div>
-          <h2 className="h2 text-slate-900 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-berlin font-bold text-slate-900 leading-tight">
             Mother Projects of <span className="text-main">TEA Regd.</span>
           </h2>
-          <p className="text-slate-600 text-xs sm:text-sm md:text-base">
+          <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
             5 flagship academic and skills institutions operating under Tabassum Educational Alliance across Pakistan since 2008.
           </p>
         </div>
@@ -88,16 +88,16 @@ const Clubs = () => {
             <button
               onClick={() => scroll("left")}
               aria-label="Previous Project"
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 hover:bg-main hover:text-white hover:border-main transition-all duration-200"
+              className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 hover:bg-main hover:text-white hover:border-main transition-all duration-200"
             >
-              <FaChevronLeft className="text-sm" />
+              <FaChevronLeft className="text-xs sm:text-sm" />
             </button>
             <button
               onClick={() => scroll("right")}
               aria-label="Next Project"
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 hover:bg-main hover:text-white hover:border-main transition-all duration-200"
+              className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-700 hover:bg-main hover:text-white hover:border-main transition-all duration-200"
             >
-              <FaChevronRight className="text-sm" />
+              <FaChevronRight className="text-xs sm:text-sm" />
             </button>
           </div>
         </div>
@@ -122,14 +122,14 @@ const Clubs = () => {
               className="block shrink-0 snap-center select-none"
             >
               <div
-                className="w-[86vw] max-w-[340px] sm:w-[360px] lg:w-[400px] h-[400px] sm:h-[440px] rounded-3xl overflow-hidden relative shadow-lg hover:shadow-2xl border border-slate-200/90 transition-all duration-300 group bg-slate-900 flex flex-col justify-between p-6 sm:p-7"
+                className="w-[84vw] max-w-[340px] sm:w-[360px] lg:w-[400px] h-[380px] sm:h-[440px] rounded-3xl overflow-hidden relative shadow-lg hover:shadow-2xl border border-slate-200/90 transition-all duration-300 group bg-slate-900 flex flex-col justify-between p-5 sm:p-7"
               >
                 {/* Bright, Crystal Clear Background Photo (NO heavy blue tint) */}
                 <Image
                   src={item.image}
                   alt={item.name}
                   fill
-                  sizes="(max-width: 640px) 86vw, 400px"
+                  sizes="(max-width: 640px) 84vw, 400px"
                   className="object-cover object-center opacity-95 transition-transform duration-700 group-hover:scale-105"
                 />
 
@@ -139,7 +139,7 @@ const Clubs = () => {
                 {/* Card Top: Monogram & Tag */}
                 <div className="relative z-10 flex items-center justify-between w-full">
                   {/* MONOGRAM EMBLEM */}
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl p-2 border border-slate-100 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl p-1.5 sm:p-2 border border-slate-100 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Image
                       src={item.monogram}
                       alt={`${item.name} monogram`}
@@ -149,25 +149,25 @@ const Clubs = () => {
                     />
                   </div>
 
-                  <span className="px-3 py-1 rounded-full text-[11px] font-bold shadow-lg uppercase tracking-wider bg-black/75 backdrop-blur-md border border-white/30 text-white">
+                  <span className="px-2.5 py-1 rounded-full text-[10px] sm:text-[11px] font-bold shadow-lg uppercase tracking-wider bg-black/75 backdrop-blur-md border border-white/30 text-white">
                     Project {item.number}
                   </span>
                 </div>
 
                 {/* Card Bottom: School Name & Tagline */}
-                <div className="relative z-10 mt-auto pt-4">
-                  <div className="text-[11px] font-semibold text-sky-300 uppercase tracking-wider mb-1">
+                <div className="relative z-10 mt-auto pt-3 sm:pt-4">
+                  <div className="text-[10px] sm:text-[11px] font-semibold text-sky-300 uppercase tracking-wider mb-1">
                     Tabassum Educational Alliance
                   </div>
                   <h3
                     style={{ textShadow: "0 2px 8px rgba(0,0,0,0.85)" }}
-                    className="font-berlin text-xl sm:text-2xl lg:text-3xl leading-snug text-white font-bold group-hover:text-sky-300 transition-colors drop-shadow-md"
+                    className="font-berlin text-lg sm:text-2xl lg:text-3xl leading-snug text-white font-bold group-hover:text-sky-300 transition-colors drop-shadow-md"
                   >
                     {item.name}
                   </h3>
                   <p
                     style={{ textShadow: "0 1px 6px rgba(0,0,0,0.85)" }}
-                    className="mt-2 text-xs sm:text-sm text-white/95 line-clamp-2 leading-relaxed drop-shadow"
+                    className="mt-1 sm:mt-2 text-xs sm:text-sm text-white/95 line-clamp-2 leading-relaxed drop-shadow"
                   >
                     {item.tagline}
                   </p>

@@ -33,11 +33,11 @@ export default function Leadership() {
           <span>Executive Leadership & Patronage</span>
         </div>
 
-        <h2 className="h2 text-slate-900 leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-berlin font-bold text-slate-900 leading-tight">
           Visionary <span className="text-main">Leadership</span>
         </h2>
 
-        <p className="max-w-2xl text-slate-600 text-xs sm:text-sm sm:text-base">
+        <p className="max-w-2xl text-slate-600 text-xs sm:text-sm sm:text-base leading-relaxed">
           Guiding Tabassum Educational Alliance Regd. with visionary patronage, principled governance, and modern institutional execution.
         </p>
       </div>

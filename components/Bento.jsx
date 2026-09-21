@@ -13,7 +13,7 @@ const Bento = () => {
       id="About"
       className="maxWSec px-4 sm:px-8 lg:px-12 py-12 flex gap-12 flex-col"
     >
-      <h2 className="h2 text-center text-slate-900">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-berlin font-bold text-center text-slate-900 leading-tight">
         Welcome to <span className="text-main">Tabassum Educational Alliance Regd.</span>
       </h2>
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
