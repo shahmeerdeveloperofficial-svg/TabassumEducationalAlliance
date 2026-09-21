@@ -57,11 +57,11 @@ const Navbar = () => {
         <div className="shadow-[0_0_0.5rem_0_#00000020] flex items-center justify-between rounded-xl h-16 bg-light text-dark px-3">
           <Link href={"/"} name="home link" className="mr-auto">
             <Image
-              src={"/tea-logo.png"}
+              src={"/monograms/tea_main.jpg"}
               width={300}
-              height={200}
+              height={300}
               alt="Tabassum Educational Alliance logo"
-              className="h-10 sm:h-12 w-10 sm:w-12 rounded-full object-contain aspect-square shadow-sm"
+              className="h-10 sm:h-12 w-10 sm:w-12 rounded-full object-contain aspect-square shadow-md border border-slate-200/80 brightness-110 contrast-105 hover:scale-105 transition-transform"
             />
           </Link>
           <div
@@ -195,11 +195,11 @@ const Navbar = () => {
               <div className="bg-main/20 px-2 py-4 mb-4 rounded-xl flex gap-2 items-center justify-between">
                 <Link href={"/"} name="home link">
                   <Image
-                    src={"/tea-logo.png"}
+                    src={"/monograms/tea_main.jpg"}
                     width={300}
-                    height={200}
+                    height={300}
                     alt="Tabassum Educational Alliance logo"
-                    className="h-12 w-12 rounded-full object-contain aspect-square shadow-sm"
+                    className="h-12 w-12 rounded-full object-contain aspect-square shadow-md border border-slate-200/80 brightness-110 contrast-105"
                   />
                 </Link>
                 <button

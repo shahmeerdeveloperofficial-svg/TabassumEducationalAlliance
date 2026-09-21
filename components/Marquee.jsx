@@ -92,11 +92,11 @@ export default function Marquee({ List = DefaultList, direction, speed }) {
                 </div>
                 {i !== ArrayData.length && (
                   <Image
-                    src={"/tea-logo.png"}
+                    src={"/monograms/tea_main.jpg"}
                     width={300}
-                    height={200}
-                    alt="Logo"
-                    className="h-10 sm:h-14 w-10 sm:w-14 rounded-full aspect-square object-contain shadow-sm"
+                    height={300}
+                    alt="TEA Logo"
+                    className="h-10 sm:h-14 w-10 sm:w-14 rounded-full aspect-square object-contain shadow-md border border-slate-200/80 brightness-110 contrast-105"
                   />
                 )}
               </div>
@@ -118,11 +118,11 @@ export default function Marquee({ List = DefaultList, direction, speed }) {
                 </div>
                 {i !== ArrayData.length && (
                   <Image
-                    src={"/tea-logo.png"}
+                    src={"/monograms/tea_main.jpg"}
                     width={300}
-                    height={200}
-                    alt="Logo"
-                    className="h-10 sm:h-14 w-10 sm:w-14 rounded-full aspect-square object-contain shadow-sm"
+                    height={300}
+                    alt="TEA Logo"
+                    className="h-10 sm:h-14 w-10 sm:w-14 rounded-full aspect-square object-contain shadow-md border border-slate-200/80 brightness-110 contrast-105"
                   />
                 )}
               </div>

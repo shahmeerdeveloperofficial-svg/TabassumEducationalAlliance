@@ -85,12 +85,12 @@ const Footer = () => {
           <div className="flex flex-col gap-4 max-sm:items-center">
             <Link href="/">
               <Image
-                src="/tea-logo.png"
+                src="/monograms/tea_main.jpg"
                 width={600}
                 height={600}
                 alt="Tabassum Educational Alliance logo"
                 priority
-                className="w-28 sm:w-36 rounded-full object-contain aspect-square shadow-lg border-2 border-white/20"
+                className="w-28 sm:w-36 rounded-full object-contain aspect-square shadow-xl border-2 border-white/40 brightness-110 contrast-105"
               />
             </Link>
 
