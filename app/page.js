@@ -9,7 +9,7 @@ import About from "@/components/About";
 const Pipeline = dynamic(() => import("../components/Pipeline"));
 const Marquee = dynamic(() => import("../components/Marquee"), { ssr: false });
 const Clubs = dynamic(() => import("../components/Clubs"));
-const VideoSec = dynamic(() => import("../components/VideoSec"));
+const CSRVideo = dynamic(() => import("../components/CSRVideo"));
 const AccessLMS = dynamic(() => import("../components/AccessLMS"));
 const Franchises = dynamic(() => import("../components/Franchises"));
 const Stats2 = dynamic(() => import("../components/Stats2"));
@@ -38,7 +38,7 @@ export default function Home() {
       <Pipeline />
       <About />
       <Clubs direction={"right"} speed={0.2} />
-      <VideoSec />
+      <CSRVideo />
       <Leadership />
       <Team />
       <AccessLMS />
