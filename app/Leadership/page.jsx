@@ -66,13 +66,13 @@ export default function LeadershipPage() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-6 rounded-2xl bg-slate-900 text-white mt-4">
             <div className="flex flex-col gap-1">
               <h4 className="font-berlin text-xl font-bold text-white">Board of Directors</h4>
-              <p className="text-xs text-slate-300">Supported by 9 specialized directors across STEM, Law, Sciences, Commerce, and Pedagogy.</p>
+              <p className="text-xs text-slate-300">Supported by 10 specialized directors across STEM, AI & Technology, Law, Sciences, Commerce, and Pedagogy.</p>
             </div>
             <Link
               href="/BoardOfDirectors"
               className="shrink-0 px-6 py-2.5 rounded-full bg-main hover:bg-mainD text-white text-xs font-semibold shadow-md transition-colors flex items-center gap-2"
             >
-              <span>View All 9 Directors</span>
+              <span>View All 10 Directors</span>
               <FaArrowRight className="text-xs" />
             </Link>
           </div>

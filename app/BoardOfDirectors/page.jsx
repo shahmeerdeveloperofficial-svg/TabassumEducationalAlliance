@@ -33,7 +33,9 @@ export default function BoardOfDirectorsPage() {
       return (
         member.qualification.includes("Eng") ||
         member.qualification.includes("Math") ||
-        member.department.includes("IT")
+        member.qualification.includes("Artificial Intelligence") ||
+        member.department.includes("IT") ||
+        member.department.includes("Artificial Intelligence")
       );
     }
     if (selectedCategory === "academics") {
@@ -77,12 +79,12 @@ export default function BoardOfDirectorsPage() {
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              The Board of Directors at Tabassum Educational Alliance Regd. comprises renowned educationists, legal luminaries, STEM professionals, and management experts dedicated to fostering academic excellence, moral integrity, and practical skills for thousands of students across Pakistan.
+              The Board of Directors at Tabassum Educational Alliance Regd. comprises renowned educationists, legal luminaries, STEM professionals, AI specialists, and management experts dedicated to fostering academic excellence, moral integrity, and practical skills for thousands of students across Pakistan.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-white/10 mt-2">
               <div className="flex flex-col">
-                <span className="font-berlin text-3xl text-main font-bold">9</span>
+                <span className="font-berlin text-3xl text-main font-bold">10</span>
                 <span className="text-xs text-slate-300">Board Members</span>
               </div>
               <div className="flex flex-col">

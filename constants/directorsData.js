@@ -89,4 +89,14 @@ export const boardOfDirectors = [
     description:
       "Overseeing fiscal management, sustainable institutional expansion, and financial education initiatives across the network.",
   },
+  {
+    id: 10,
+    name: "Hafiz Khuzaima Dhuddi",
+    title: "Board of Directors",
+    qualification: "B.S (Artificial Intelligence)",
+    image: "/directors/hafiz_khuzaima_dhuddi.jpg",
+    department: "Artificial Intelligence & Emerging Technologies",
+    description:
+      "Directing AI curriculum design, advanced computing initiatives, and emerging technology skills across the TEA educational network.",
+  },
 ];
