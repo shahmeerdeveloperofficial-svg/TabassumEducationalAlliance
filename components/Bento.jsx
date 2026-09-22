@@ -187,7 +187,7 @@ const Bento = () => {
                     />
                   </div>
                   <span className="text-xs font-semibold group-hover/item:text-sky-300 transition-colors line-clamp-1">
-                    {item.number} {item.name}
+                    {item.name}
                   </span>
                 </Link>
               ))}

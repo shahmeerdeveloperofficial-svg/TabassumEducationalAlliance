@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 const heroImages = [
+  "/tea_uniform_boy.png",
   "/tea_student1.jpg",
   "/tea_student2.jpg",
   "/tea_student3.jpg",

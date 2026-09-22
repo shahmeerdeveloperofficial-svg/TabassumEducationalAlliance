@@ -99,4 +99,14 @@ export const boardOfDirectors = [
     description:
       "Directing AI curriculum design, advanced computing initiatives, and emerging technology skills across the TEA educational network.",
   },
+  {
+    id: 11,
+    name: "Hafiz Hassaan Tahir",
+    title: "Board of Directors",
+    qualification: "B.S (Hons.)",
+    image: "/directors/hafiz_hassaan_tahir.jpg",
+    department: "Student Affairs & Academic Development",
+    description:
+      "Overseeing student affairs, character development initiatives, co-curricular coordination, and academic growth across TEA institutions.",
+  },
 ];

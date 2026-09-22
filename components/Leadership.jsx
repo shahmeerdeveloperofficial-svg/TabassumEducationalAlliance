@@ -336,7 +336,7 @@ export default function Leadership() {
             href="/BoardOfDirectors"
             className="px-4 py-2 rounded-xl bg-main hover:bg-mainD text-white text-xs font-semibold shadow-sm transition-colors flex items-center gap-1.5"
           >
-            <span>Board of Directors (10)</span>
+            <span>Board of Directors (11)</span>
             <FaArrowRight className="text-[10px]" />
           </Link>
         </div>

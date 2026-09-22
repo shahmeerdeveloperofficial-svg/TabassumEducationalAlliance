@@ -42,7 +42,9 @@ export default function BoardOfDirectorsPage() {
       return (
         member.qualification.includes("Biological") ||
         member.qualification.includes("Physics") ||
-        member.qualification.includes("Urdu")
+        member.qualification.includes("Urdu") ||
+        member.department.includes("Academic") ||
+        member.department.includes("Student")
       );
     }
     if (selectedCategory === "legal") {
@@ -84,7 +86,7 @@ export default function BoardOfDirectorsPage() {
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-white/10 mt-2">
               <div className="flex flex-col">
-                <span className="font-berlin text-3xl text-main font-bold">10</span>
+                <span className="font-berlin text-3xl text-main font-bold">11</span>
                 <span className="text-xs text-slate-300">Board Members</span>
               </div>
               <div className="flex flex-col">
