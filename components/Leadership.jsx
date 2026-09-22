@@ -133,7 +133,7 @@ export default function Leadership() {
             <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl border-2 border-sky-400/40 group">
               <div className="aspect-[3/4] relative w-full bg-slate-950">
                 <Image
-                  src="/leadership/mufti_tahir_tabassum.jpg"
+                  src="/leadership/nazir_dhuddi.jpg"
                   alt="Nazir Dhuddi - Chairman TEA Regd."
                   fill
                   sizes="(max-width: 1024px) 100vw, 420px"

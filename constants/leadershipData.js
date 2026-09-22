@@ -18,7 +18,7 @@ export const chairman = {
   name: "Nazir Dhuddi",
   title: "Chairman",
   organization: "Tabassum Educational Alliance Regd.",
-  image: "/monograms/tea_main.jpg",
+  image: "/leadership/nazir_dhuddi.jpg",
   tagline: "Founding Visionary & Network Leadership (Since 2008)",
   description:
     "Leading the founding mission and strategic direction of Tabassum Educational Alliance Regd. since 2008 with a steadfast commitment to accessible quality education, character building, and nationwide institutional excellence.",
@@ -56,7 +56,7 @@ export const executiveLeadership = [
     role: "Chairman",
     badge: "Chairman",
     organization: "Tabassum Educational Alliance Regd.",
-    image: "/monograms/tea_main.jpg",
+    image: "/leadership/nazir_dhuddi.jpg",
     isPoster: false,
     highlights: [
       "Chairman TEA Regd. (Since 2008)",
