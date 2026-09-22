@@ -9,6 +9,8 @@ const heroImages = [
   "/tea_student1.jpg",
   "/tea_student2.jpg",
   "/tea_student3.jpg",
+  "/tea_student4.jpg",
+  "/tea_student5.jpg",
 ];
 
 const HeroHeader = ({ title, description }) => {
