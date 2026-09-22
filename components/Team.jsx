@@ -125,12 +125,14 @@ export default function Team() {
                   </h3>
 
                   {/* Qualification Badge */}
-                  <div className="mt-1 flex items-start gap-1.5 p-2 rounded-lg bg-amber-50 border border-amber-200/70 text-amber-900 text-xs font-medium">
-                    <FaGraduationCap className="text-amber-600 text-sm shrink-0 mt-0.5" />
-                    <span className="line-clamp-2 leading-tight font-semibold">
-                      {member.qualification}
-                    </span>
-                  </div>
+                  {member.qualification && (
+                    <div className="mt-1 flex items-start gap-1.5 p-2 rounded-lg bg-amber-50 border border-amber-200/70 text-amber-900 text-xs font-medium">
+                      <FaGraduationCap className="text-amber-600 text-sm shrink-0 mt-0.5" />
+                      <span className="line-clamp-2 leading-tight font-semibold">
+                        {member.qualification}
+                      </span>
+                    </div>
+                  )}
 
                   <p className="mt-1 text-xs text-slate-600 line-clamp-2 leading-relaxed">
                     {member.description}

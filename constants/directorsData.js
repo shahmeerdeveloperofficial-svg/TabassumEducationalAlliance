@@ -103,10 +103,10 @@ export const boardOfDirectors = [
     id: 11,
     name: "Hafiz Hassaan Tahir",
     title: "Board of Directors",
-    qualification: "B.S (Hons.)",
+    qualification: "",
     image: "/directors/hafiz_hassaan_tahir.jpg",
-    department: "Student Affairs & Academic Development",
+    department: "Board of Directors",
     description:
-      "Overseeing student affairs, character development initiatives, co-curricular coordination, and academic growth across TEA institutions.",
+      "Member of the Board of Directors at Tabassum Educational Alliance Regd.",
   },
 ];

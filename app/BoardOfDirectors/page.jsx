@@ -158,10 +158,12 @@ export default function BoardOfDirectorsPage() {
                   </h3>
 
                   {/* Qualification */}
-                  <div className="inline-flex items-start gap-2 p-2.5 rounded-xl bg-amber-50 border border-amber-200/70 text-amber-900 text-xs font-medium">
-                    <FaGraduationCap className="text-amber-600 text-base shrink-0 mt-0.5" />
-                    <span className="leading-tight font-semibold">{director.qualification}</span>
-                  </div>
+                  {director.qualification && (
+                    <div className="inline-flex items-start gap-2 p-2.5 rounded-xl bg-amber-50 border border-amber-200/70 text-amber-900 text-xs font-medium">
+                      <FaGraduationCap className="text-amber-600 text-base shrink-0 mt-0.5" />
+                      <span className="leading-tight font-semibold">{director.qualification}</span>
+                    </div>
+                  )}
 
                   <p className="text-slate-600 text-xs sm:text-sm mt-1 leading-relaxed">
                     {director.description}
@@ -287,10 +289,12 @@ export default function BoardOfDirectorsPage() {
             </div>
 
             <div className="p-6 sm:p-8 flex flex-col gap-4">
-              <div className="flex items-center gap-2 p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-sm font-semibold">
-                <FaGraduationCap className="text-amber-600 text-lg shrink-0" />
-                <span>{activeModalMember.qualification}</span>
-              </div>
+              {activeModalMember.qualification && (
+                <div className="flex items-center gap-2 p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-sm font-semibold">
+                  <FaGraduationCap className="text-amber-600 text-lg shrink-0" />
+                  <span>{activeModalMember.qualification}</span>
+                </div>
+              )}
 
               <div>
                 <h5 className="text-xs uppercase font-bold text-slate-400 tracking-wider mb-1">
