@@ -40,14 +40,14 @@ export default function CSRVideo() {
             alt="Tabassum Educational Alliance Video Thumbnail"
             fill
             priority
-            className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out opacity-60"
+            className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out opacity-85"
           />
         </div>
 
-        {/* Ambient Overlay Gradients for Cinematic Depth */}
-        <div className="absolute inset-0 bg-slate-950/60 backdrop-contrast-[1.1]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-slate-950/70" />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-transparent to-slate-950/80" />
+        {/* Ambient Overlay Gradients - brightened & decent */}
+        <div className="absolute inset-0 bg-slate-950/25 backdrop-contrast-[1.05]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-slate-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/45 via-transparent to-slate-950/45" />
 
         {/* Top Badges */}
         <div className="absolute top-4 sm:top-6 inset-x-4 sm:inset-x-8 flex items-center justify-between z-10">
