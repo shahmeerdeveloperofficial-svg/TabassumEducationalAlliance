@@ -76,8 +76,8 @@ export const executiveLeadership = [
     isPoster: false,
     highlights: [
       "President (Honorary) TEA Regd.",
-      "Distinguished Community & Educational Leader",
-      "Strategic Governance & Institutional Mentorship",
+      "President, Majlis Ulama e Nizamia Pakistan",
+      "Chairman IQRA Educational Board Pakistan",
     ],
     description:
       "Steering the honorary leadership and high-level representation of Tabassum Educational Alliance Regd. with dedication to moral excellence and academic progress.",

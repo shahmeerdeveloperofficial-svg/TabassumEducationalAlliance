@@ -238,7 +238,7 @@ export default function BoardOfDirectorsPage() {
               Supervising Quality Institutions Across Pakistan
             </h3>
             <p className="text-slate-600 text-sm leading-relaxed">
-              The Board of Directors oversees Oxford Progressive Schools Regd., IQRA Madinat-Ul-Atfal Group of Schools Regd., Tabassum I.T & Skills Center, Idara Taleemat-e-Nabawia Lahore, and The Nest (National Educational School for Triumph).
+              The Board of Directors oversees Oxford Progressive Schools Regd., IQRA Madinat-Ul-Atfal Group of Schools Regd., Tabassum I.T & Skills Center, Idara Taleemat-e-Nabawia Lahore, and NEST (National Educational School for Triumph).
             </p>
           </div>
 

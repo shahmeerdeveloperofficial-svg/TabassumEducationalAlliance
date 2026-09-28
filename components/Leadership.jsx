@@ -240,15 +240,15 @@ export default function Leadership() {
               <div className="pt-2 flex flex-col gap-1.5 text-left">
                 <div className="flex items-center gap-2 text-xs text-slate-700">
                   <span className="w-1.5 h-1.5 rounded-full bg-sec shrink-0" />
+                  <span>President, Majlis Ulama e Nizamia Pakistan</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-slate-700">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sec shrink-0" />
+                  <span>Chairman IQRA Educational Board Pakistan</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-slate-700">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sec shrink-0" />
                   <span>Honorary Leadership & Representation</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-slate-700">
-                  <span className="w-1.5 h-1.5 rounded-full bg-sec shrink-0" />
-                  <span>Values-Based Institutional Mentorship</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-slate-700">
-                  <span className="w-1.5 h-1.5 rounded-full bg-sec shrink-0" />
-                  <span>Community Engagement & Alliance Building</span>
                 </div>
               </div>
             </div>

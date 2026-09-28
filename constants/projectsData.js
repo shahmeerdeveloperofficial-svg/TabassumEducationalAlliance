@@ -50,8 +50,8 @@ export const motherProjects = [
   {
     id: 4,
     number: "04",
-    name: "The Nest (School for Triumph)",
-    shortName: "The Nest (NEST)",
+    name: "NEST (National Educational School for Triumph)",
+    shortName: "NEST",
     monogram: "/monograms/nest.jpg",
     tagline: "Knowledge, Wisdom, Purity — Experiential Education & Triumph",
     description:

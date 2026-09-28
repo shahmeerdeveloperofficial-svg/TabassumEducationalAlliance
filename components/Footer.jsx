@@ -59,7 +59,7 @@ const Footer = () => {
         { title: "IQRA Madinat-Ul-Atfal Group", src: "/SocietyAndClubs" },
         { title: "Tabassum I.T and Skills Center", src: "/SocietyAndClubs" },
         { title: "Idara Taleemat-e-Nabawia", src: "/SocietyAndClubs" },
-        { title: "The Nest (National Educational)", src: "/SocietyAndClubs" },
+        { title: "NEST (National Educational School for Triumph)", src: "/SocietyAndClubs" },
       ],
     },
   ];
