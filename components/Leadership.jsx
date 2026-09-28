@@ -21,7 +21,7 @@ export default function Leadership() {
     { title: "Renowned Religious Scholar", icon: FaBookOpen, color: "text-amber-500 bg-amber-500/10 border-amber-500/20" },
     { title: "Scholar ARY QTV", icon: FaTv, color: "text-sky-500 bg-sky-500/10 border-sky-500/20" },
     { title: "Chairman Idara Taleemat-e-Nabawia Lahore", icon: FaMosque, color: "text-emerald-500 bg-emerald-500/10 border-emerald-500/20" },
-    { title: "President National Ulama Council Pakistan", icon: FaUsers, color: "text-indigo-500 bg-indigo-500/10 border-indigo-500/20" },
+    { title: "Chairman National Ulama Council Pakistan", icon: FaUsers, color: "text-indigo-500 bg-indigo-500/10 border-indigo-500/20" },
   ];
 
   return (

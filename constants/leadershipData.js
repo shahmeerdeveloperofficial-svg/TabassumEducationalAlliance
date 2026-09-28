@@ -8,7 +8,7 @@ export const patronInChief = {
     "Renowned Religious Scholar",
     "Scholar ARY QTV",
     "Chairman Idara Taleemat-e-Nabawia Lahore",
-    "President National Ulama Council Pakistan",
+    "Chairman National Ulama Council Pakistan",
   ],
   description:
     "Providing esteemed spiritual guidance, visionary leadership, and overarching patronage to Tabassum Educational Alliance Regd., ensuring values-based education, moral integrity, and national empowerment.",
@@ -45,7 +45,7 @@ export const executiveLeadership = [
       "Renowned Religious Scholar",
       "Scholar ARY QTV",
       "Chairman Idara Taleemat-e-Nabawia Lahore",
-      "President National Ulama Council Pakistan",
+      "Chairman National Ulama Council Pakistan",
     ],
     description:
       "Visionary mentor and religious scholar guiding the spiritual, ethical, and academic philosophy of TEA across Pakistan.",
