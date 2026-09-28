@@ -41,7 +41,7 @@ export const boardOfDirectors = [
   },
   {
     id: 5,
-    name: "Uzair Atbar Ch",
+    name: "Uzair Atbar Ch.",
     title: "Board of Directors",
     qualification: "M. Phil (Physics)",
     image: "/directors/uzair_atbar_ch.jpg",
