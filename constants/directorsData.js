@@ -31,7 +31,7 @@ export const boardOfDirectors = [
   },
   {
     id: 4,
-    name: "Adnan Dhuddi",
+    name: "M. Adnan Tayyab",
     title: "Board of Directors",
     qualification: "B.Sc (Math), B.S (Statistics)",
     image: "/directors/adnan_dhuddi.jpg",
@@ -103,10 +103,10 @@ export const boardOfDirectors = [
     id: 11,
     name: "Hafiz Hassaan Tahir",
     title: "Board of Directors",
-    qualification: "",
+    qualification: "B.S I.T (Cont.)",
     image: "/directors/hafiz_hassaan_tahir.jpg",
-    department: "Board of Directors",
+    department: "Information Technology & Student Affairs",
     description:
-      "Member of the Board of Directors at Tabassum Educational Alliance Regd.",
+      "Overseeing IT student affairs, academic development initiatives, and technical skill enhancement across TEA institutions.",
   },
 ];

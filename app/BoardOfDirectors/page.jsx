@@ -34,6 +34,7 @@ export default function BoardOfDirectorsPage() {
         member.qualification.includes("Eng") ||
         member.qualification.includes("Math") ||
         member.qualification.includes("Artificial Intelligence") ||
+        member.qualification.includes("I.T") ||
         member.department.includes("IT") ||
         member.department.includes("Artificial Intelligence")
       );
