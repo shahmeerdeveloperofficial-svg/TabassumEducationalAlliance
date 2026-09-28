@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState, useEffect } from "react";
-import LinkEffect from "./ui/LinkEffect";
 import {
   FaInstagram,
   FaFacebook,
@@ -114,8 +113,9 @@ const Footer = () => {
                     href={subItem.src}
                     target={subItem.blank ? "_blank" : "_self"}
                     rel={subItem.blank ? "noopener noreferrer" : ""}
+                    className="block py-1 text-sm text-slate-300 hover:text-sky-400 transition-colors leading-relaxed"
                   >
-                    <LinkEffect noicon text={subItem.title} />
+                    {subItem.title}
                   </Link>
                 ))}
               </div>

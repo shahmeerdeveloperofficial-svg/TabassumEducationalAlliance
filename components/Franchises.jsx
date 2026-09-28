@@ -240,7 +240,7 @@ export default function Franchises() {
               referrerPolicy="no-referrer-when-downgrade"
             />
 
-            {/* Floating Info Overlay Card (Rills Style) */}
+            {/* Floating Info Overlay Card */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeCampus.id}
