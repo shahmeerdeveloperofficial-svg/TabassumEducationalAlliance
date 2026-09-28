@@ -143,22 +143,6 @@ export const motherProjects = [
     slug: "/SocietyAndClubs",
     image: "/tea_student1.jpg",
   },
-  {
-    id: 10,
-    number: "10",
-    name: "Tabassum Educational Alliance Regd.",
-    shortName: "TEA Regd. Head Office",
-    monogram: "/monograms/tea_main.jpg",
-    tagline: "ہم سفر ہر قدم — The Fastest Growing Educational Network",
-    description:
-      "The apex governing body orchestrating academic quality, teacher training, curriculum standards, and network growth since 2008.",
-    tag: "Apex Alliance 10",
-    badgeColor: "bg-sky-500/10 text-sky-600 border-sky-300",
-    gradient: "from-sky-900/10 via-cyan-500/5 to-transparent",
-    border: "border-sky-400/30 hover:border-sky-500",
-    slug: "/AboutUs",
-    image: "/tea_student2.jpg",
-  },
 ];
 
 export const alliesProjects = [
