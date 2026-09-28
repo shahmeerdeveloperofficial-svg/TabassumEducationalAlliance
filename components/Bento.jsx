@@ -186,7 +186,7 @@ const Bento = () => {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <span className="text-xs font-semibold group-hover/item:text-sky-300 transition-colors line-clamp-1">
+                  <span className="text-xs font-semibold group-hover/item:text-sky-300 transition-colors leading-snug">
                     {item.name}
                   </span>
                 </Link>
