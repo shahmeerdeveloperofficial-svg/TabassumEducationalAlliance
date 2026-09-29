@@ -41,18 +41,18 @@ export default function LeadershipPage() {
               <span className="text-[11px] text-amber-800 font-medium mt-auto pt-2">Spiritual Guidance & Patronage</span>
             </div>
 
-            <div className="p-5 rounded-2xl bg-sky-50/70 border border-sky-200/80 flex flex-col gap-2">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-sky-700">Level 2 • Chair</span>
-              <h4 className="font-berlin text-lg font-bold text-slate-900">Chairman</h4>
-              <p className="text-xs text-slate-700 font-semibold">Nazir Dhuddi</p>
-              <span className="text-[11px] text-sky-800 font-medium mt-auto pt-2">Founding Vision & Network Leadership</span>
-            </div>
-
             <div className="p-5 rounded-2xl bg-indigo-50/70 border border-indigo-200/80 flex flex-col gap-2">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-700">Level 3 • Presidency</span>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-700">Level 2 • Presidency</span>
               <h4 className="font-berlin text-lg font-bold text-slate-900">President (Honorary)</h4>
               <p className="text-xs text-slate-700 font-semibold">Muhammad Anwar Ul Rasool Murtazai</p>
               <span className="text-[11px] text-indigo-800 font-medium mt-auto pt-2">Honorary Representation & Mentorship</span>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-sky-50/70 border border-sky-200/80 flex flex-col gap-2">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-sky-700">Level 3 • Chair</span>
+              <h4 className="font-berlin text-lg font-bold text-slate-900">Chairman</h4>
+              <p className="text-xs text-slate-700 font-semibold">Nazir Dhuddi</p>
+              <span className="text-[11px] text-sky-800 font-medium mt-auto pt-2">Founding Vision & Network Leadership</span>
             </div>
 
             <div className="p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200/80 flex flex-col gap-2">

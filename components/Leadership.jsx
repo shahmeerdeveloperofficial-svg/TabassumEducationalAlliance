@@ -121,83 +121,7 @@ export default function Leadership() {
         </div>
       </div>
 
-      {/* 2. Chairman Feature Card (Nazir Dhuddi) */}
-      <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 via-[#002b5e] to-slate-950 text-white shadow-2xl border border-slate-800/90">
-        {/* Ambient Glow */}
-        <div className="absolute top-0 right-0 w-80 h-80 bg-sky-500/15 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-10 lg:p-12 items-center">
-          {/* Left / Portrait Image */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl border-2 border-sky-400/40 group">
-              <div className="aspect-[3/4] relative w-full bg-slate-950">
-                <Image
-                  src="/leadership/nazir_dhuddi.jpg"
-                  alt="Nazir Dhuddi - Chairman TEA Regd."
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 420px"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  priority
-                />
-              </div>
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent p-4 flex items-center justify-between text-xs">
-                <span className="font-semibold text-sky-300 flex items-center gap-1.5">
-                  <FaBuildingColumns className="text-sky-400" />
-                  Chairman
-                </span>
-                <span className="text-slate-300 text-[11px]">TEA Regd.</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right / Content & Message */}
-          <div className="lg:col-span-7 flex flex-col gap-5">
-            <div className="flex flex-col gap-2">
-              <div className="inline-flex items-center gap-2 self-start px-3.5 py-1 rounded-full bg-sky-400/15 border border-sky-400/30 text-sky-300 text-xs font-bold uppercase tracking-widest">
-                <FaBuildingColumns className="text-sm text-sky-400" />
-                <span>Chairman — Tabassum Educational Alliance Regd.</span>
-              </div>
-
-              <h3 className="font-berlin text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-wide">
-                Nazir Dhuddi
-              </h3>
-
-              <p className="text-sky-200 text-xs sm:text-sm font-medium">
-                Founding Visionary & Network Leadership — Since 2008
-              </p>
-            </div>
-
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-              Leading the founding mission, strategic governance, and nationwide expansion of Tabassum Educational Alliance Regd. with a steadfast commitment to accessible quality education, moral character building, and educational empowerment across Pakistan.
-            </p>
-
-            {/* Chairman Message Excerpt */}
-            <div className="p-4 rounded-2xl bg-white/[0.05] border-l-4 border-sky-400 text-xs sm:text-sm text-slate-200 italic leading-relaxed">
-              “Education is the foundation upon which individuals, communities and nations build their future. Since its establishment in 2008, TEA has been committed to serving education with sincerity, expanding opportunities for learners, and contributing positively to the future of Pakistan.”
-            </div>
-
-            {/* Action buttons */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Link
-                href="/ChairmanMessage"
-                className="px-5 py-2.5 rounded-full bg-main hover:bg-mainD text-white text-xs font-bold shadow-lg transition-all flex items-center gap-2 hover:scale-105"
-              >
-                <span>Read Full Chairman's Message</span>
-                <FaArrowRight className="text-[10px]" />
-              </Link>
-              <a
-                href="tel:03008847670"
-                className="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white border border-white/20 text-xs font-semibold transition-all"
-              >
-                Contact Head Office
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 3. President (Honorary) Feature Card */}
+      {/* 2. President (Honorary) Feature Card */}
       <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 via-[#002b5e] to-slate-950 text-white shadow-2xl border border-slate-800/90">
         {/* Ambient Glow */}
         <div className="absolute top-0 right-0 w-80 h-80 bg-indigo-500/15 rounded-full blur-3xl pointer-events-none" />
@@ -273,6 +197,82 @@ export default function Leadership() {
             {/* Quote Banner */}
             <div className="p-4 rounded-2xl bg-white/[0.05] border-l-4 border-indigo-400 text-xs sm:text-sm text-slate-200 italic leading-relaxed">
               “Steering values, ethical standards, and academic excellence with sincere dedication to illuminate future generations.”
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 3. Chairman Feature Card (Nazir Dhuddi) */}
+      <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 via-[#002b5e] to-slate-950 text-white shadow-2xl border border-slate-800/90">
+        {/* Ambient Glow */}
+        <div className="absolute top-0 right-0 w-80 h-80 bg-sky-500/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-10 lg:p-12 items-center">
+          {/* Left / Portrait Image */}
+          <div className="lg:col-span-5 flex justify-center">
+            <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl border-2 border-sky-400/40 group">
+              <div className="aspect-[3/4] relative w-full bg-slate-950">
+                <Image
+                  src="/leadership/nazir_dhuddi.jpg"
+                  alt="Nazir Dhuddi - Chairman TEA Regd."
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 420px"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  priority
+                />
+              </div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent p-4 flex items-center justify-between text-xs">
+                <span className="font-semibold text-sky-300 flex items-center gap-1.5">
+                  <FaBuildingColumns className="text-sky-400" />
+                  Chairman
+                </span>
+                <span className="text-slate-300 text-[11px]">TEA Regd.</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right / Content & Message */}
+          <div className="lg:col-span-7 flex flex-col gap-5">
+            <div className="flex flex-col gap-2">
+              <div className="inline-flex items-center gap-2 self-start px-3.5 py-1 rounded-full bg-sky-400/15 border border-sky-400/30 text-sky-300 text-xs font-bold uppercase tracking-widest">
+                <FaBuildingColumns className="text-sm text-sky-400" />
+                <span>Chairman — Tabassum Educational Alliance Regd.</span>
+              </div>
+
+              <h3 className="font-berlin text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-wide">
+                Nazir Dhuddi
+              </h3>
+
+              <p className="text-sky-200 text-xs sm:text-sm font-medium">
+                Founding Visionary & Network Leadership — Since 2008
+              </p>
+            </div>
+
+            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Leading the founding mission, strategic governance, and nationwide expansion of Tabassum Educational Alliance Regd. with a steadfast commitment to accessible quality education, moral character building, and educational empowerment across Pakistan.
+            </p>
+
+            {/* Chairman Message Excerpt */}
+            <div className="p-4 rounded-2xl bg-white/[0.05] border-l-4 border-sky-400 text-xs sm:text-sm text-slate-200 italic leading-relaxed">
+              “Education is the foundation upon which individuals, communities and nations build their future. Since its establishment in 2008, TEA has been committed to serving education with sincerity, expanding opportunities for learners, and contributing positively to the future of Pakistan.”
+            </div>
+
+            {/* Action buttons */}
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <Link
+                href="/ChairmanMessage"
+                className="px-5 py-2.5 rounded-full bg-main hover:bg-mainD text-white text-xs font-bold shadow-lg transition-all flex items-center gap-2 hover:scale-105"
+              >
+                <span>Read Full Chairman's Message</span>
+                <FaArrowRight className="text-[10px]" />
+              </Link>
+              <a
+                href="tel:03008847670"
+                className="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white border border-white/20 text-xs font-semibold transition-all"
+              >
+                Contact Head Office
+              </a>
             </div>
           </div>
         </div>
