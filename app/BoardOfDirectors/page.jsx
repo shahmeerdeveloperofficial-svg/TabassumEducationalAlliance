@@ -128,36 +128,18 @@ export default function BoardOfDirectorsPage() {
           {filteredDirectors.map((director) => (
             <div
               key={director.id}
-              className="bg-white rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-2xl hover:shadow-sky-500/15 hover:border-sky-400/80 hover:-translate-y-2 transition-all duration-500 flex flex-col overflow-hidden group relative"
+              className="bg-white rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-main/60 hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden group"
             >
-              {/* Image Container with Animated TEA Theme Background */}
-              <div className="relative aspect-[6/7] w-full bg-gradient-to-b from-sky-50/90 via-slate-50/70 to-white overflow-hidden">
-                {/* Dynamic Theme Glow Aura */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(0,162,232,0.22)_0%,rgba(0,59,122,0.08)_55%,transparent_100%)] opacity-80 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 ease-out pointer-events-none" />
-
-                {/* Floating Subtle Ambient Color Orbs */}
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-sky-400/25 rounded-full blur-2xl group-hover:bg-sky-400/40 group-hover:scale-110 transition-all duration-700 pointer-events-none" />
-                <div className="absolute -bottom-6 -left-6 w-36 h-36 bg-main/20 rounded-full blur-xl group-hover:bg-main/35 transition-all duration-700 pointer-events-none" />
-
-                {/* Elegant Architectural Prestige Rings */}
-                <div className="absolute top-4 left-1/2 -translate-x-1/2 w-52 h-52 rounded-full border border-sky-300/30 group-hover:border-sky-400/60 group-hover:scale-110 transition-all duration-700 pointer-events-none" />
-                <div className="absolute top-8 left-1/2 -translate-x-1/2 w-44 h-44 rounded-full border border-dashed border-sky-200/40 group-hover:rotate-45 transition-transform duration-1000 pointer-events-none" />
-
-                {/* Director Portrait Image */}
+              {/* Clean Director Portrait Photo Frame */}
+              <div className="relative aspect-[6/7] w-full bg-slate-50 overflow-hidden">
                 <Image
                   src={director.image}
                   alt={director.name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105 relative z-[2]"
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   priority={director.id <= 3}
                 />
-
-                {/* Shimmer Light Sweep on Hover */}
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out bg-gradient-to-r from-transparent via-white/35 to-transparent z-[3] pointer-events-none" />
-
-                {/* Soft Bottom Gradient Seamless Blend */}
-                <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-white via-white/60 to-transparent z-[4] pointer-events-none" />
               </div>
 
               {/* Card Body */}
